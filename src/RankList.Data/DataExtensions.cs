@@ -1,18 +1,17 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using RankList.Data.DbContexts;
+using RankList.Data.Database;
 using RankList.Data.Models;
 
 namespace RankList.Data;
 
 public static class DataExtensions
 {
-    public static IServiceCollection AddDataConfiguration(this IServiceCollection services, ConnectionOptions options)
+    public static void AddAppData(this IServiceCollection services, ConnectionOptions connectionOptions)
     {
-        ArgumentNullException.ThrowIfNull(options);
-        options.ValidateConnectionString();
-        
-        services.AddSingleton(options);
+        ArgumentNullException.ThrowIfNull(connectionOptions);
+        connectionOptions.ValidateConnectionString();
+
+        services.AddSingleton(connectionOptions);
         services.AddDbContext<AppDbContext>();
-        return services;
     }
 }

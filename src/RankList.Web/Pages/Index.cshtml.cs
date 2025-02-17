@@ -1,19 +1,15 @@
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RankList.Auth;
+using RankList.Data.Database;
 
 namespace RankList.Pages;
 
-public class IndexModel : PageModel
+[Authorize(AuthenticationSchemes = CookieAuthDefaults.AuthenticationScheme)]
+public class IndexModel(ILogger<IndexModel> logger, AppDbContext dbContext) : PageModel
 {
-    private readonly ILogger<IndexModel> _logger;
-
-    public IndexModel(ILogger<IndexModel> logger)
-    {
-        _logger = logger;
-    }
-
     public void OnGet()
     {
-
+        var t = dbContext.Users.Count();
     }
 }

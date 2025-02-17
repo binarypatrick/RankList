@@ -6,11 +6,11 @@ public class ConnectionOptions
     public string? Database { get; init; }
     public string? Username { get; init; }
     public string? Password { get; init; }
-    
+
     public int Port { get; init; } = 5432;
 
     internal string ConnectionString
-        => $"Host={Host};Post={Port};Database={Database};Username={Username};Password={Password}";
+        => $"Host={Host};Port={Port};Database={Database};Username={Username};Password={Password}";
 
     internal void ValidateConnectionString()
     {

@@ -8,8 +8,8 @@ public class Review
     public float Rating { get; set; }
     public Guid CreatedBy { get; set; }
     public DateTimeOffset CreatedOn { get; set; } = DateTimeOffset.UtcNow;
-    
-    
+
+
     public Item Item { get; set; }
     public User Creator { get; set; }
 }

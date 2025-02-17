@@ -1,0 +1,21 @@
+﻿@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using RankList.Common.Models
+@model RankList.Pages.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+@foreach (User user in Model.Users)
+{
+    <h1>@user.Username</h1>
+}
+<h1>@Model?.LoginForm?.Username</h1>
+<div>
+    <form method="post">
+        <input asp-for="LoginForm!.Username"/>
+        <button type="submit">Login</button>
+    </form>
+</div>
