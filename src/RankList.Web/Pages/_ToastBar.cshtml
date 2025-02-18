@@ -1,0 +1,15 @@
+﻿@using RankList.Common.Models
+@using RankList.Common.Services
+@{
+    ToastManager toastManager = ToastManager.Instance;
+}
+
+<div class="toast-container">
+@foreach (Toast toast in toastManager.GetActive())
+{
+    <div id="toast-@toast.ToastId" class="toast-wrapper">
+        <span class="toast-body">@toast.Text</span>
+        <span class="toast-dismiss">x</span>
+    </div>
+}
+</div>
