@@ -1,3 +1,6 @@
-﻿button {
-    background: red;
+﻿nav {
+    background: #657cbd;
+    a {
+        color: #000;
+    }
 }

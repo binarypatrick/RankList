@@ -1,15 +1,12 @@
-﻿using RankList.Common.Models;
+﻿using RankList.Common.Interfaces;
+using RankList.Common.Models;
 
 namespace RankList.Common.Services;
 
-public class ToastManager
+public class ToastManager : IToastManager
 {
-    public static ToastManager Instance { get; } = new ToastManager();
-    
     private readonly List<Toast> toasts = [];
 
-    private ToastManager() { }
-    
     public IEnumerable<Toast> GetActive()
         => toasts.OrderByDescending(x => x.ToastId);
     

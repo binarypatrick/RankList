@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - RankList</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
-    <link rel="stylesheet" href="~/@(nameof(RankList.Web)).styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/ranklist.web.styles.css" asp-append-version="true"/>
 </head>
 <body>
 <div>
@@ -20,19 +20,15 @@
                     aria-expanded="false" aria-label="Toggle navigation">
             </button>
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                    </li>
-
-                    <li class="nav-item">
+                <div class="">
+                    <div class="nav-item">
                         <a class="" asp-page="CreateAccount">Sign In</a>
-                    </li>
+                    </div>
                     
-                    <li class="nav-item">
+                    <div class="nav-item">
                         <a class="" asp-page="CreateAccount">Create Account</a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>

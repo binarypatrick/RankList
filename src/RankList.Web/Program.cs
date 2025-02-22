@@ -1,4 +1,5 @@
 using RankList.Auth;
+using RankList.Common;
 using RankList.Data;
 using RankList.Data.Models;
 using RankList.Services;
@@ -17,6 +18,7 @@ ConnectionOptions connectionOptions = builder.Configuration
 
 builder.Services.AddAppData(connectionOptions);
 builder.Services.AddAppServices();
+builder.Services.AddCommonServices();
 
 WebApplication app = builder.Build();
 
