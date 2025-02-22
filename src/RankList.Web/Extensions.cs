@@ -1,4 +1,4 @@
-﻿namespace RankList;
+﻿namespace RankList.Web;
 
 public static class Extensions
 {

@@ -1,8 +1,8 @@
-using RankList;
 using RankList.Auth;
 using RankList.Data;
 using RankList.Data.Models;
 using RankList.Services;
+using RankList.Web;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
