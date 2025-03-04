@@ -1,4 +1,12 @@
-﻿* {
+﻿:root {
+    --primary: #657cbd;
+    --secondary: #bda666;
+    --dark: #1b1b1b;
+    --light-gray: #e4e4e4;
+    --light: #cfcfcf;
+}
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -9,9 +17,12 @@
 html {
     font-size: 16px;
     font-family: Tahoma, Arial, sans-serif;
+    background: var(--dark);
+    color: var(--light);
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
+

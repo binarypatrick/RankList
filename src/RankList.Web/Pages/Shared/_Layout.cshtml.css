@@ -1,6 +1,9 @@
 ﻿nav {
-    background: #657cbd;
+    background: var(--primary);
+    font-size: 1.2rem;
+    
     a {
-        color: #000;
+        color: var(--light-gray);
+        text-decoration: none;
     }
 }
