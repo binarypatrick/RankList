@@ -8,5 +8,5 @@ public interface IToastManager
 
     void RemoveToast(Guid toastId);
 
-    void AddToast(string text);
+    void AddToast(ToastLevel level, string text);
 }

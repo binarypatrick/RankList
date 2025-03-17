@@ -13,6 +13,6 @@ public class ToastManager : IToastManager
     public void RemoveToast(Guid toastId)
         => toasts.RemoveAll(x => x.ToastId == toastId);
     
-    public void AddToast(string text)
-        => toasts.Add(new Toast(text));
+    public void AddToast(ToastLevel level, string text)
+        => toasts.Add(new Toast(text, level));
 }

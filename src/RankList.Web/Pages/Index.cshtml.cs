@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using RankList.Auth;
 using RankList.Common.Interfaces;
+using RankList.Common.Models;
 using RankList.Common.Services;
 using RankList.Data.Database;
 
@@ -14,11 +15,11 @@ public class IndexModel(ILogger<IndexModel> logger, AppDbContext dbContext, IToa
     {
         try
         {
-//            int t = dbContext.Users.Count();
+            throw new System.NotImplementedException();
         }
         catch (Exception ex)
         {
-            toastManager.AddToast(ex.Message);
+            toastManager.AddToast(ToastLevel.Error, ex.Message);
             ModelState.AddModelError(string.Empty, ex.Message);
         }
     }

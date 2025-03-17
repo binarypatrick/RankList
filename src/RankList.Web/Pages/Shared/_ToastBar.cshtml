@@ -1,0 +1,19 @@
+﻿@using RankList.Common.Interfaces
+@using RankList.Common.Models
+@inject IToastManager ToastManager;
+
+<div class="toast-bar">
+@foreach (Toast toast in ToastManager.GetActive())
+{
+    <div id="toast-@toast.ToastId" class="toast-wrapper toast-@toast.Level.ToLower()">
+        <div class="container toast-container">
+            <span class="toast-body">@toast.Text</span>
+            <button class="toast-dismiss" onclick="remove(this)">x</button>
+        </div>
+    </div>
+}
+</div>
+
+<script>
+    const remove = (el) => el.parentNode.parentNode.removeChild(el.parentNode);
+</script>

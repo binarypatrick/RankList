@@ -1,0 +1,39 @@
+﻿.toast-wrapper {
+    color: #ffffff;
+    
+    &.toast-error {
+        background-color: #dc3545;
+    }
+    
+    &.toast-warning {
+        background-color: #ffc107;
+    }
+    
+    &.toast-info {
+        background-color: #17a2b8;
+    }
+}
+    
+
+.toast-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    .toast-body {
+        padding: 10px;
+        flex: 1;
+        text-align: center;
+    }
+    
+    .toast-dismiss {
+        width: 16px;
+        height: 32px;
+        font-size: 1.8em;
+        color: var(--light-gray);
+        background: transparent;
+    }
+    
+    
+}
+

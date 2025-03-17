@@ -9,6 +9,7 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
 builder.Services.AddAuthentication(CookieAuthSchemeOptions.DefaultConfiguration)
     .AddScheme<CookieAuthSchemeOptions, CookieAuthHandler>(CookieAuthDefaults.AuthenticationScheme, options => { });
 

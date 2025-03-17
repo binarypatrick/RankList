@@ -12,15 +12,16 @@
     <partial name="_ToastBar"/>
 </div>
 <header>
-    <nav>
-        <div class="container">
-            <a class="navbar-brand" asp-area="" asp-page="/Index">RankList</a>
-            <a  aria-label="link to sign in" asp-page="CreateAccount">Sign-in</a>
-        </div>
+    <nav class="container">
+        <a href="/" class="logo-wrapper">
+            @* <span>Rank List</span> *@
+        </a>
+        <span class="gap">&nbsp;</span>
+        <a aria-label="link to sign in" href="/create-account">Sign-in</a>
     </nav>
 </header>
 
-<main role="main">
+<main role="main">      
     <div class="container">
         @RenderBody()
     </div>
